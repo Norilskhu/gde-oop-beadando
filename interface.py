@@ -28,8 +28,8 @@ def print_interface(szalloda, foglalas):
                 szobaszam = input("Kérem adja meg a lefoglalni kívánt szoba szobaszámát: ")
                 datum = datum_valaszto()
                 try:
-                    foglalas.foglalas(szalloda, szobaszam, datum)
-                    print("Sikeres foglalas!")
+                    ar = foglalas.foglalas(szalloda, szobaszam, datum)
+                    print("Sikeres foglalás! A szoba ára: " + str(ar) + " forint.")
                 except Exception as e:
                     print(e)
             case "2":
